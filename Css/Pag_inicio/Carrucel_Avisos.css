@@ -1,0 +1,384 @@
+/* ========== RESET Y CONFIGURACIÓN BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color_azul: #007BB5;
+    --color_rosa: #FF5C8D;
+    --color_negro: #000;
+    --color_seleccion: #e91e63;
+    --color_blanco: #fff9f9;
+    --degradado: linear-gradient(90deg, #007BB5, #FF5C8D);
+    --degramovil: linear-gradient(90deg, #FF5C8D, #007BB5);
+}
+
+/* ========== CONTENEDOR PRINCIPAL DEL CARRUSEL ========== */
+#container-slider {
+    background:var(--color_blanco); 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    height: 95vh;
+    max-height: 500px;
+    margin: 40px auto;
+    border-radius: 30px;
+    overflow: hidden; /* Asegúrate de que el contenido no sobresalga */
+    
+}
+.slider-container img {
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Aplica el borde redondeado a las imágenes */
+}
+
+
+
+
+/* ========== SLIDER PRINCIPAL ========== */
+#slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#slider li {
+    background-repeat: no-repeat;
+    background-size: contain; /* Mantiene la proporción de la imagen */
+    background-position: center;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* ========== FLECHAS DE NAVEGACIÓN ========== */
+#container-slider .arrowPrev ,
+#container-slider .arrowNext  {
+    
+    font-size: 30pt;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+ 
+    border-radius: 50%;
+    padding: 10px;
+    
+    background: transparent;
+}
+
+#container-slider .arrowPrev:hover,
+#container-slider .arrowNext:hover {
+    background:transparent;
+    
+}
+
+#container-slider .arrowPrev {
+    left: 20px;
+    
+}
+
+#container-slider .arrowNext {
+    right: 20px;
+}
+#container-slider .arrowPrev ,
+#container-slider .arrowNext {
+    font-size: 54pt;
+    padding: 8px;
+    color: black;
+    /* Cambia 'red' por el color que desees */
+}
+
+/* ========== CONTENIDO INTERNO DEL SLIDE ========== */
+#slider li .content_slider {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+}
+
+#slider li .content_slider > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_slider h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.content_slider p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+/* ========== BOTÓN DEL SLIDE ========== */
+.btnSlider {
+    padding: 10px 50px;
+    font-size: 14pt;
+    background: rgba(13, 13, 13, 0.55);
+    color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 31px;
+    text-decoration: none;
+    transition: 0.5s all;
+    width: fit-content;
+    text-align: center;
+    display: inline-block;
+    margin: 15px auto 0 auto;
+    
+}
+
+.btnSlider:hover {
+    background: #111;
+    border: 1px solid #111;
+    color: #fff;
+    
+}
+
+/* ========== PUNTOS DE NAVEGACIÓN ========== */
+.listslider {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.listslider li {
+    background: none !important;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    
+}
+
+.listslider li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    
+}
+
+.listslider li a.item-select-slid {
+    background: #fff !important;
+    
+}
+
+.listslider li a:hover {
+    background: #555;
+    
+}
+
+/* ========== RESPONSIVE PARA TABLET Y MÓVILES ========== */
+@media screen and (max-width: 768px) {
+    #container-slider {
+        height: auto;
+        min-height: 350px;
+    }
+
+    #slider {
+        height: auto;
+        min-height: 350px;
+        border-radius: 30px;
+    }
+
+    .content_slider {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .content_slider h2 {
+        font-size: 1.5rem;
+    }
+
+    .content_slider p {
+        font-size: 0.95rem;
+    }
+
+    .btnSlider {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        margin-top: 15px;
+        display: block; 
+        justify-content: center;
+        background-color: #007BB5;
+        margin-right: -125px;
+    }
+    
+    .listslider {
+        
+        bottom: 20px;
+        gap: 25px;
+
+    }
+
+    .listslider li {
+        width: 14px;
+        height: 14px;      
+        
+    }
+
+    h1 {
+
+        color: var(--color_negro);
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+    #container-slider .arrowPrev ,
+    #container-slider .arrowNext {
+    font-size: 24pt;
+    padding: 8px;
+    color:white; /* Cambia 'red' por el color que desees */
+}
+}
+
+@media screen and (max-width: 460px) {
+
+    h1 {
+
+        color: var(--color_negro);
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+    #container-slider {
+        background: var(--degradado);
+        width: 90%;
+        height: auto;
+        min-height: 50px;
+        margin: auto;
+        border-radius: 30;
+    }
+
+    #slider {
+        height: 400px;
+    min-height: 400px;
+    border-radius: 30px;
+    gap: 8px;
+    }
+
+    #slider li {
+        background-size: contain; /* Muestra la imagen completa */
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 30px;
+        
+        
+    }
+
+    #slider li .content_slider {
+        background: none;
+        padding: 10px 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content_slider h2 {
+        font-size: 15pt !important;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .content_slider p {
+        font-size: 12pt !important;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    
+    .content_slider > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btnSlider:hover {
+        background: #111;
+        border: 1px solid #111;
+        color: #fff;
+    }
+
+    #container-slider .arrowPrev,
+    #container-slider .arrowNext {
+        font-size: 40pt;
+        padding: 8px;
+    }
+
+    #container-slider .arrowPrev {
+        left: 15px;
+    }
+
+    #container-slider .arrowNext {
+        
+        right: 15px;
+        background: transparent;
+       
+        }
+
+    .listslider {
+        text-align: center;
+        bottom: 25px;
+        gap: 24px;
+    }
+
+    .listslider li {
+        width: 14px;
+        height: 14px;
+        
+    }
+
+    .listslider li a {
+        background: #e0dbdb;
+    }
+
+    .listslider li a.item-select-slid {
+        background: #d6d2d2 !important;
+    }
+}

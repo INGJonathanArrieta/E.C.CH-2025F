@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conócenos - Personal</title>
+  <style>
+    body {
+      background-color: #0c1e3e;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .tarjeta-persona {
+      display: flex;
+      flex-direction: row;
+      width: 48%;
+      min-width: 300px;
+      background-color: #1a2b4c;
+      border: 2px solid white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .tarjeta-persona img {
+      width: 40%;
+      object-fit: contain;
+      background-color: #0c1e3e;
+    }
+
+    .info {
+      padding: 20px;
+      width: 60%;
+    }
+
+    .info h3 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #ffd700;
+    }
+
+    .info p {
+      font-size: 14px;
+      margin: 8px 0;
+    }
+
+    .facebook-post {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .tarjeta-persona {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .tarjeta-persona img {
+        width: 100%;
+      }
+
+      .info {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Directivos</h1>
+  <div class="contenedor">
+    <div class="tarjeta-persona">
+      <img src="imagen1.png" alt="Directivo 1">
+      <div class="info">
+        <h3>María López</h3>
+        <p>Directora General</p>
+        <p>15 años liderando proyectos educativos con excelencia.</p>
+      </div>
+    </div>
+    <div class="tarjeta-persona">
+      <img src="imagen2.jpg" alt="Directivo 2">
+      <div class="info">
+        <h3>Carlos Hernández</h3>
+        <p>Subdirector Académico</p>
+        <p>Apasionado por la innovación educativa y tecnología.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Publicación de Facebook -->
+  <div class="facebook-post">
+    <iframe 
+      src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjonathan.jonas.312095%2Fposts%2F122094427616763976%3A1672098850054498&show_text=true&width=500" 
+      width="500" 
+      height="534" 
+      style="border:none;overflow:hidden" 
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true" 
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+    </iframe>
+  </div>
+
+</body>
+</html>

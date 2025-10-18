@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Inicio-E.C.Chimalhuacan</title>
+    <link rel="stylesheet" href="Css/Pag_inicio/Styles copy.css">
+
+
+    <link rel="stylesheet" href="Css/Pag_inicio/Carrucel_Avisos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <script defer src="../Js/Inicio/Carrucel.js"></script>
+    <!-- Font Awesome CDN -->
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="hero">
+        <img src="Imagenes/logov5.png" alt="Logo de la escuela" class="hero-image">
+    </header>
+
+    <!-- Botón de menú para móviles -->
+    <div class="hide">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+        </svg>
+        Menu
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav id="main-menu" aria-label="Menú de navegación principal">
+        <ul>
+            <li><a href="index.html" class="link" title="Ir a la página de inicio">Inicio</a></li>
+            <li><a href="../Html/Conocenos.html" class="link" title="Conoce más sobre nosotros">Acerca de Nosotros</a>
+            </li>
+            <li><a href="../Html/Avisos.html" class="link" title="Ver avisos importantes">Avisos</a></li>
+            <li><a href="../Html/Carreras.html" class="link" title="Explora nuestras ofertas de carreras">Carreras</a>
+            </li>
+            <li><a href="../Html/Diplomados.html" class="link"
+                    title="Explora nuestras ofertas de diplomados">Diplomados</a></li>
+            <li><a href="../Html/Contactanos.html" class="link" title="Contáctanos para más información">Contáctanos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Carrusel Avisos -->
+    <h1>AVISOS</h1>
+    <section id="container-slider">
+
+        <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev" onclick="handleManualSlide('prev')">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+
+
+        <a href="javascript: fntExecuteSlide('next');" class="arrowNext" onclick="handleManualSlide('next')">
+
+
+            <i class="fas fa-chevron-right"></i>
+        </a>
+
+        <ul class="listslider">
+            <li class="aviso"><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+
+            <li class="aviso"><a itlist="itList_1" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_2" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_3" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_4" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_5" href="#"></a></li>
+        </ul>
+
+        <ul id="slider">
+            <li class="active" style="background-image: url('Imagenes/Gastronomia.jpeg'); z-index: 1; opacity: 1;">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/Avisos.html#nino" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('../Imagenes/Belleza.jpeg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/Avisos.html#estudiante" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('../Imagenes/Ingles.jpeg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('../Imagenes/Educacion.jpeg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html#carrera_uno" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('../Imagenes/Informatica.jpeg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('../Imagenes/Barberia.jpeg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!--carreras-->
+
+
+    <h1>CARRERAS</h1>
+    <section id="container-slider">
+
+        <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev" onclick="handleManualSlide('prev')">
+            <i class="fas fa-chevron-left" style="color: #000;"></i>
+        </a>
+
+
+        <a href="javascript: fntExecuteSlide('next');" class="arrowNext" onclick="handleManualSlide('next')">
+
+
+            <i class="fas fa-chevron-right" style="color: #000;"></i>
+        </a>
+
+        <ul class="listslider">
+            <li class="aviso"><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+
+            <li class="aviso"><a itlist="itList_1" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_2" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_3" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_4" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_5" href="#"></a></li>
+        </ul>
+
+        <ul id="slider">
+            <li class="active" style="background-image: url('../Imagenes/Gastronomia.jpeg'); z-index: 1; opacity: 1;">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/Avisos.html#nino" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li
+                style="background-image: url('https://cdn.pixabay.com/photo/2018/02/20/10/28/business-3167295_960_720.jpg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/Avisos.html#estudiante" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li
+                style="background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/42/typing-849806_960_720.jpg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li
+                style="background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/42/typing-849806_960_720.jpg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html#carrera_uno" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li
+                style="background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/42/typing-849806_960_720.jpg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li
+                style="background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/42/typing-849806_960_720.jpg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!--diplomados-->
+
+
+    <h1>DIPLOMADOS</h1>
+    <section id="container-slider">
+
+        <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev" onclick="handleManualSlide('prev')">
+            <i class="fas fa-chevron-left" style="color: #000;"></i>
+        </a>
+
+
+        <a href="javascript: fntExecuteSlide('next');" class="arrowNext" onclick="handleManualSlide('next')">
+
+
+            <i class="fas fa-chevron-right" style="color: #000;"></i>
+        </a>
+
+        <ul class="listslider">
+            <li class="aviso"><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+
+            <li class="aviso"><a itlist="itList_1" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_2" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_3" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_4" href="#"></a></li>
+            <li class="aviso"><a itlist="itList_5" href="#"></a></li>
+        </ul>
+
+        <ul id="slider">
+            <li class="active" style="background-image: url('../Imagenes/Gastronomia.jpeg'); z-index: 1; opacity: 1;">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/Avisos.html#nino" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li
+                style="background-image: url('https://cdn.pixabay.com/photo/2018/02/20/10/28/business-3167295_960_720.jpg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/Avisos.html#estudiante" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li
+                style="background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/42/typing-849806_960_720.jpg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li
+                style="background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/42/typing-849806_960_720.jpg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html#carrera_uno" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li
+                style="background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/42/typing-849806_960_720.jpg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+            <li
+                style="background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/42/typing-849806_960_720.jpg');">
+                <div class="content_slider">
+                    <div>
+                        <a href="../Html/prueba.html" class="btnSlider">Ver más</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../Imagenes/logov5.png" alt="Logo de la escuela">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>CONTACTANOS</h2>
+                <p>55xxxxxxxx</p>
+                <p>55xxxxxxxx</p>
+            </div>
+            <div class="box">
+                <h2>SÍGUENOS EN</h2>
+                <div class="red-social">
+                    <a href="#" class="fab fa-facebook-f" title="Facebook"></a>
+                    <a href="#" class="fab fa-instagram" title="Instagram"></a>
+                    <a href="#" class="fab fa-youtube" title="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts al final -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../Js/Inicio/menu.js"></script>
+
+</body>
+
+
+</html>

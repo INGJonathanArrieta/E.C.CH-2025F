@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Estilo del contenedor principal de diplomados */
+#container-slider-diplomados {
+    position: relative;
+    display: flex; /* Cambia a flex para centrar el contenido dentro del contenedor */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    max-width: 800px; /* Establece un ancho máximo */
+    height: 80vh; /* Ajusta la altura según sea necesario */
+    border-radius: 0px;
+    margin: auto; /* Centra el contenedor en la página */
+}
+
+/* Estilo para el slider de diplomados */
+#slider-diplomados {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+    border-radius: 30px;
+}
+
+/* Estilo para cada slide */
+#slider-diplomados li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: opacity 1s;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 30px;
+}
+
+/* Estilo de las flechas de navegación */
+#container-slider-diplomados .arrowPrev, #container-slider-diplomados .arrowNext {
+    font-size: 30pt;
+    color: rgba(204, 204, 204, 0.65);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    z-index: 2;
+}
+
+#container-slider-diplomados .arrowNext {
+    left: initial;
+    right: 50px !important;
+}
+
+/* Estilo para el contenido dentro de cada slide */
+.content_slider {
+    padding: 15px 30px;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del encabezado dentro del contenido */
+.content_slider h3 {
+    font-family: 'Arial';
+    font-size: 30pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el párrafo dentro del contenido */
+.content_slider p {
+    font-size: 15pt;
+    font-family: 'Arial';
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los botones "Ver más" */
+.btnSlider {
+    color: #FFF;
+    font-size: 15pt;
+    font-family: 'Arial';
+    letter-spacing: 1px;
+    padding: 10px 50px;
+    border: 1px solid #CCC;
+    background: rgba(13, 13, 13, 0.55);
+    border-radius: 31px;
+    text-decoration: none;
+    transition: .5s all;
+}
+
+.btnSlider:hover {
+    background: #111;
+    border: 1px solid #111;
+}
+
+/* Estilo para la lista de puntos de navegación */
+.listslider-diplomados {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    bottom: 5%;
+    list-style: none;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.listslider-diplomados li {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.listslider-diplomados li a {
+    background: #CCC;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.item-select-slid {
+    background: #FFF !important;
+}
+
+@media (max-width: 767px) {
+    #container-slider-diplomados {
+        width: 100%;
+        height: 55vh;
+    }
+
+    #slider-diplomados {
+        height: 55vh;
+        min-height: 350px;
+    }
+
+    .content_slider {
+        padding: 10px 20px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .content_slider h3 {
+        font-size: 18pt;
+        margin-bottom: 10px;
+    }
+
+    .content_slider p {
+        font-size: 12pt;
+        margin-bottom: 15px;
+    }
+
+    .btnSlider {
+        padding: 8px 25px;
+        font-size: 11pt;
+    }
+
+    #container-slider-diplomados .arrowPrev,
+    #container-slider-diplomados .arrowNext {
+        font-size: 20pt;
+    }
+
+    #container-slider-diplomados .arrowPrev {
+        left: 15px;
+    }
+
+    #container-slider-diplomados .arrowNext {
+        right: 15px !important;
+    }
+
+    .listslider-diplomados li {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    #container-slider-diplomados {
+        width: 95%;
+        height: 65vh;
+    }
+
+    #slider-diplomados {
+        height: 65vh;
+        min-height: 400px;
+    }
+
+    .content_slider h3 {
+        font-size: 22pt;
+    }
+
+    .content_slider p {
+        font-size: 13pt;
+    }
+
+    .btnSlider {
+        padding: 10px 35px;
+        font-size: 13pt;
+    }
+
+    #container-slider-diplomados .arrowPrev,
+    #container-slider-diplomados .arrowNext {
+        font-size: 24pt;
+    }
+
+    #container-slider-diplomados .arrowPrev {
+        left: 25px;
+    }
+
+    #container-slider-diplomados .arrowNext {
+        right: 25px !important;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    #container-slider-diplomados {
+        width: 90%;
+        height: 70vh;
+    }
+
+    #slider-diplomados {
+        height: 70vh;
+        min-height: 450px;
+    }
+
+    .content_slider h3 {
+        font-size: 26pt;
+    }
+
+    .content_slider p {
+        font-size: 14pt;
+    }
+
+    .btnSlider {
+        padding: 10px 40px;
+        font-size: 14pt;
+    }
+}

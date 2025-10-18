@@ -1,0 +1,235 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --color_azul: #007BB5;
+    --color_rosa: #FF5C8D;
+    --color_negro: #000;
+    --color_seleccion: #e91e63;
+    --color_blanco: #fff9f9;
+    --degradado: linear-gradient(90deg, #007BB5, #FF5C8D);
+    --degramovil: linear-gradient(90deg, #FF5C8D, #007BB5);
+}
+
+/* ========== HEADER HERO ========== */
+.hero {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    background: var(--degradado);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 20px;
+}
+
+/* ========== MENÚ PRINCIPAL ========== */
+nav#main-menu {
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+}
+
+nav#main-menu ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 28px auto 5vh;
+    padding: 0;
+    border-radius: 30px;
+}
+
+nav#main-menu li {
+    padding: 12px;
+}
+
+nav#main-menu a.link {
+    font-size: 1.0rem;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    color: var(--color_blanco);
+    background: var(--degramovil);
+    padding: 0.1rem 1.0rem;
+    border-radius: 30rem;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 110px;
+    transition: background 0.3s ease;
+}
+
+nav#main-menu a.link:hover {
+    background-color: var(--color_seleccion);
+    color: #fff;
+}
+
+/* Botón hamburguesa */
+.hide {
+    font-size: 22px;
+    padding: 16px;
+    color: var(--color_blanco);
+    cursor: pointer;
+    display: none;
+    background: var(--degramovil);
+    text-align: center;
+    border-radius: 30px;
+    margin: 1rem auto;
+}
+
+/* ========== FOOTER ========== */
+footer.pie-pagina {
+    width: 100%;
+    background: var(--degradado);
+    margin-top: 5%;
+    padding: 30px 0;
+}
+
+footer.pie-pagina .grupo-1 {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+footer.pie-pagina .grupo-1 .box figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer.pie-pagina .grupo-1 .box figure img {
+    width: 100%;
+    max-width: 200px;
+}
+
+footer.pie-pagina .grupo-1 .box h2 {
+    font-size: 1.8rem;
+    color: #131413;
+    margin-bottom: 15px;
+}
+
+footer.pie-pagina .grupo-1 .box p {
+    font-family: "Times New Roman", Times, serif;
+    color: #131413;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+footer.pie-pagina .red-social a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin: 0 5px;
+    background-color: var(--color_negro);
+    color: var(--color_blanco);
+    text-align: center;
+    line-height: 45px;
+    text-decoration: none;
+    transition: all 300ms ease;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+footer.pie-pagina .red-social a:hover {
+    color: var(--color_seleccion);
+}
+
+/* ========== TITULARES ========== */
+h1,
+h2,
+h3 {
+    color: rgb(19, 20, 19);
+    text-align: center;
+    margin: 20px auto;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.5rem;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+@media (max-width: 768px) {
+    .hide {
+        display: block;
+    }
+
+    nav#main-menu ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: var(--color_blanco);
+        margin: 20px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    nav#main-menu ul.show {
+        display: flex;
+    }
+
+    nav#main-menu a.link {
+        font-size: 1.3rem;
+        padding: 0.8rem 1rem;
+        min-width: auto;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 2rem;
+    }
+
+    footer.pie-pagina .grupo-1 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav#main-menu a.link {
+        font-size: 1.1rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    footer.pie-pagina .grupo-1 .box h2 {
+        font-size: 1.4rem;
+    }
+
+    footer.pie-pagina .grupo-1 .box p {
+        font-size: 1rem;
+    }
+
+    footer.pie-pagina .red-social a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+    }
+}

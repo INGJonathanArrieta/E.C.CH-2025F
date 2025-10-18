@@ -1,0 +1,29 @@
+body {
+  background-color: #0c1e3e;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  width: 300px;
+  height: 300px;
+  border: 2px solid white;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #1a2b4c;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
